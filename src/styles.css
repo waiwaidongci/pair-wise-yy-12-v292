@@ -220,3 +220,420 @@ input {
     padding: 24px;
   }
 }
+
+/* ---------- 闭环业务组件 ---------- */
+
+select,
+textarea {
+  width: 100%;
+  min-height: 42px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  padding: 0 12px;
+  background: #ffffff;
+  font: inherit;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tabs button {
+  padding: 0 16px;
+}
+
+.tabs .ghost {
+  margin-left: auto;
+  color: #8a5a2b;
+  border-style: dashed;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.chip.ok {
+  background: color-mix(in srgb, var(--secondary) 14%, #ffffff);
+  color: var(--secondary);
+}
+
+.chip.danger {
+  background: #fde8e8;
+  color: #b91c1c;
+}
+
+.chip.info {
+  background: color-mix(in srgb, var(--accent) 12%, #ffffff);
+  color: var(--accent);
+}
+
+.chip.warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.chip.muted {
+  background: #eef2f7;
+  color: #64748b;
+}
+
+.banner {
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  line-height: 1.7;
+  border: 1px solid var(--border);
+}
+
+.banner.ok {
+  background: color-mix(in srgb, var(--secondary) 10%, #ffffff);
+  border-color: color-mix(in srgb, var(--secondary) 35%, var(--border));
+  color: var(--secondary);
+}
+
+.banner.warn {
+  background: #fffbeb;
+  border-color: #fcd34d;
+  color: #92400e;
+}
+
+.banner.danger {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+}
+
+.banner ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.banner.flash {
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.empty {
+  color: #64748b;
+  padding: 18px 0;
+}
+
+.sub {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.hint {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* 马匹列表 */
+
+.horse-list {
+  display: grid;
+  gap: 16px;
+}
+
+.horse-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfdff;
+}
+
+.horse-card > header,
+.reminder > header,
+.history-card > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.horse-card h3,
+.reminder h3,
+.history-card h3 {
+  margin: 0;
+}
+
+.hoof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.hoof-cell {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.hoof-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hoof-cell dl,
+.history-fields {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.hoof-cell dl div,
+.history-fields div {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.hoof-cell dt,
+.history-fields dt {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.hoof-cell dd,
+.history-fields dd {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.overdue {
+  color: #b91c1c;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.streak {
+  margin: 0;
+  font-size: 13px;
+  color: #92400e;
+  background: #fffbeb;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.hoof-actions,
+.row-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hoof-actions button,
+.row-actions button {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.hoof-empty {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.hoof-empty p {
+  margin: 0;
+}
+
+/* 登记表单 */
+
+.mode-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.mode-switch button {
+  padding: 0 14px;
+}
+
+.inline-label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.form-footer .primary {
+  padding: 0 18px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 复查提醒 */
+
+.reminder-list {
+  display: grid;
+  gap: 14px;
+}
+
+.reminder {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfdff;
+  display: grid;
+  gap: 12px;
+}
+
+.reminder.is-overdue {
+  border-color: #fca5a5;
+  background: #fff7f7;
+}
+
+.reminder-side {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.review-form {
+  border-top: 1px dashed var(--border);
+  padding-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: end;
+  min-height: 42px;
+}
+
+.checkbox-label input {
+  width: 18px;
+  min-height: 18px;
+}
+
+.checkbox-label span {
+  color: #172033;
+  font-size: 14px;
+}
+
+/* 更换历史 */
+
+.history-list {
+  display: grid;
+  gap: 14px;
+}
+
+.history-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfdff;
+  display: grid;
+  gap: 12px;
+}
+
+.history-card.is-old {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.history-card.is-old h3 {
+  color: #64748b;
+}
+
+.history-fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+}
+
+.invalid-line {
+  margin: 0;
+  font-size: 13px;
+  color: #b91c1c;
+}
+
+.review-timeline {
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.review-timeline h4 {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.review-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.review-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.review-item.is-invalid p {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+@media (max-width: 860px) {
+  .hoof-grid,
+  .history-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: span 1;
+  }
+
+  .tabs .ghost {
+    margin-left: 0;
+  }
+}
